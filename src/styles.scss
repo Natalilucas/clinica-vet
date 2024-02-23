@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+h2
+{
+  color: rgb(68, 194, 194);
+}
+
+
+.btnIcon {
+  background-color: DodgerBlue; /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+}
+
+.btnIconAnimal{
+  background-color: rgb(255, 30, 229); /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+
+}
+
+.btnIconTutor{
+  background-color: rgb(95, 183, 218); /* Blue background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-size: 16px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgba(180, 178, 178, 0.833);
+}

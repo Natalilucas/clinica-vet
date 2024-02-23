@@ -1,0 +1,101 @@
+<div class="container">
+  <h2>Nova marcação</h2>
+  <div class="m-2">
+    <form
+      [formGroup]="formularioMarcacao"
+      (ngSubmit)="handleSubmit()"
+      class="form-control"
+    >
+      <div>
+        <label for="tipo" class="form-label">Tipo:</label>
+        <input
+          formControlName="tipo"
+          type="text"
+          id="tipo"
+          class="form-control"
+        />
+        @if ((submitted || formularioMarcacao.controls['tipo'].touched) &&
+        formularioMarcacao.controls['tipo'].errors) {
+        <div class="danger">
+          @if (formularioMarcacao.controls['tipo'].errors['required']) {
+          <span>O Tipo é obrigatório</span>
+          }
+        </div>
+        }
+      </div>
+      <div>
+        <label for="animalId" class="form-label">ID do Animal:</label>
+        <input
+          formControlName="animalId"
+          type="text"
+          id="animalId"
+          class="form-control"
+        />
+        @if ((submitted || formularioMarcacao.controls['animalId'].touched) &&
+        formularioMarcacao.controls['animalId'].errors) {
+        <div>
+          @if (formularioMarcacao.controls['animalId'].errors['required']) {
+          <span>O ID do Animal é obrigatório</span>
+          }
+        </div>
+        }
+      </div>
+      <div>
+        <label for="tutorId" class="form-label">ID do Tutor:</label>
+        <input
+          formControlName="tutorId"
+          type="text"
+          id="tutorId"
+          class="form-control"
+        />
+        @if ((submitted || formularioMarcacao.controls['tutorId'].touched) &&
+        formularioMarcacao.controls['tutorId'].errors) {
+        <div>
+          @if (formularioMarcacao.controls['tutorId'].errors['required']) {
+          <span>O ID do Tutor é obrigatório</span>
+          }
+        </div>
+        }
+      </div>
+      <div>
+        <label for="dataHora" class="form-label">Data e Hora:</label>
+        <input
+          formControlName="dataHora"
+          type="datetime-local"
+          id="dataHora"
+          class="form-control"
+        />
+        @if ((submitted || formularioMarcacao.controls['dataHora'].touched) &&
+        formularioMarcacao.controls['dataHora'].errors) {
+        <div>
+          @if (formularioMarcacao.controls['dataHora'].errors['required']) {
+          <span>A Data e Hora é obrigatório</span>
+          }
+        </div>
+        }
+      </div>
+
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button
+          class="btn btn-primary"
+          type="button"
+          class="btn btn-info mt-3"
+          type="submit"
+          [disabled]="submitted && formularioMarcacao.invalid"
+        >
+          Criar marcação
+        </button>
+        <button
+          class="btn btn-primary"
+          type="button"
+          class="btn btn-outline-info mt-3"
+          type="submit"
+          [routerLink]="['/']"
+          routerLinkActive="router-link-active"
+        >
+          Voltar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

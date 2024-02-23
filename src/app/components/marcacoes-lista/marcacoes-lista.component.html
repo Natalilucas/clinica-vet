@@ -1,0 +1,37 @@
+<table class="table table-striped table-hover ">
+  <thead>
+    <tr>
+      <th scope="row">Tipo</th>
+      <th scope="row">Animal</th>
+      <th scope="row">Tutor</th>
+      <th scope="row">Data e Hora </th>
+      <th scope="row">Realizada</th>
+      <th scope="row" >Cancelada</th>
+      <th scope="row">Editar</th>
+      <th scope="row">Deletar</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (marcacao of marcacoes; track marcacao.id) {
+    <tr>
+      <td scope="col">{{marcacao.id}}</td>
+      <td scope="col">{{marcacao.animalId}}</td>
+      <td scope="col">{{marcacao.tutorId}}</td>
+      <td scope="col">{{marcacao.dataHora}}</td>
+      <td scope="col">{{marcacao.realizada}}</td>
+      <td scope="col">{{marcacao.cancelada}}</td>
+      <td><button class="btn btnIcon" type="submit" [routerLink]="['/editar-marcacao/', marcacao.id]" ><i class="fa fa-pencil"></i></button></td>
+      <td><button class="btn btnIcon" type="submit" [routerLink]="['/eliminar-marcacao/', marcacao.id]"><i class="fa fa-trash"></i></button></td>
+    </tr> } @empty {
+      @if (marcacoes) {
+        <tr >
+          <td colspan="4">Não há marcações!</td>
+        </tr>
+      } @else {
+        <tr>
+          <td colspan="4">A carregar as marcações .. </td>
+        </tr>
+      }
+    }
+  </tbody>
+</table>

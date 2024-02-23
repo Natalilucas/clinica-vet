@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="text-center">
+    <h2>Lista de Clientes</h2>
+  </div>
+  <div>
+    <button [routerLink]="['/tutores-criar']" type="button" class="btn btn-outline-primary">Cadastrar Cliente </button>
+  </div>
+
+  <table class="table table-striped mt-2">
+    <thead>
+      <tr>
+        <th scope="row">Id</th>
+        <th scope="row">Nome</th>
+        <th scope="row">Telemovel</th>
+        <th scope="row">Email</th>
+        <th>Editar</th>
+        <th>Deletar</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (tutor of tutores; track tutor.id){
+      <tr>
+        <td scope="col">{{tutor.id}}</td>
+        <td scope="col">{{tutor.nome}}</td>
+        <td scope="col">{{tutor.telemovel}}</td>
+        <td scope="col">{{tutor.email}}</td>
+        <td><button class="btn btnIconTutor" type="submit" [routerLink]="['/tutores-editar/', tutor.id]" ><i class="fa fa-pencil"></i></button></td>
+        <td><button class="btn btnIconTutor" type="submit" [routerLink]="['/tutores-deletar/', tutor.id]"><i class="fa fa-trash"></i></button></td>
+      </tr> } @empty {
+      @if (tutores) {
+        <tr>
+          <td colspan="4">Não há animais cadastrado!</td>
+        </tr>
+        } @else {
+        <tr>
+          <td colspan="4">A carregar os animais .. </td>
+        </tr>
+        }
+      }
+
+    </tbody>
+
+  </table>
+
+  <div class="text-center mt-5">
+    <button class="btn btn-outline-primary mt-3" type="submit" [routerLink]="['/']"
+      routerLinkActive="router-link-active">
+      Voltar</button>
+  </div>
+
+</div>

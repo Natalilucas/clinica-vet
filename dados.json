@@ -1,0 +1,41 @@
+{
+  "animais": [
+    {
+      "id": "982a",
+      "nome": "Lola",
+      "especie": "Cão",
+      "raca": "Dálmata",
+      "sexo": "f",
+      "dataNascimento": "2021-04-10T00:00",
+      "tutorId": ""
+    }
+  ],
+  "tutores": [
+    {
+      "id": "892a",
+      "nome": "Ana",
+      "telemovel": "934567891",
+      "email": "ana@hotmail.com"
+    },
+    {
+      "id": "58aa",
+      "nome": "Carlos",
+      "telemovel": "978912345",
+      "email": "carlos@gmail.com"
+    }
+  ],
+  "marcacoes": [
+    {
+      "id": "33c1",
+      "nome": "natali",
+      "telemovel": "1111",
+      "email": "natali@nayali.com"
+    },
+    {
+      "id": "1111",
+      "nome": "natali",
+      "telemovel": "333333333",
+      "email": "hsauh@mil.com"
+    }
+  ]
+}

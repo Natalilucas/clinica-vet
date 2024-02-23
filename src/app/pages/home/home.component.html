@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="pt-5 d-flex justify-content-between">
+    <button [routerLink]="['/nova-marcacao']" type="button" class="btn btn-primary"> Nova Marcação </button>
+    <button [routerLink]="['/animais-lista']" type="button" class="btn btn-warning">Animais</button>
+    <button [routerLink]="['/tutores-lista']" type="button" class="btn btn-success">Tutores</button>
+  </div>
+  <div class="pt-5 text-center">
+    <h2>Marcações</h2>
+  </div>
+  <div class="align-content-center">
+    <app-marcacoes-lista/>
+
+  </div>
+</div>

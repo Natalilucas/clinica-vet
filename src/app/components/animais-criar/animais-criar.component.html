@@ -1,0 +1,55 @@
+<div class="container">
+  <h2 class="animaisCriar">Cadastrar animais</h2>
+  <div>
+    <form [formGroup]="formularioAnimais" (ngSubmit)="handleSubmit()" class="form-control">
+      <div>
+        <label for="id">ID:</label>
+        <input formControlName="id" type="text" id="id" class="form-control" />
+      </div>
+      <div>
+        <label for="nome">Nome:</label>
+        <input formControlName="nome" type="text" id="nome" class="form-control" />
+      </div>
+      <div>
+        <label for="especie">Especie:</label>
+        <input formControlName="especie" type="text" id="especie" class="form-control" />
+      </div>
+      <div>
+        <label for="raca">Raça:</label>
+        <input formControlName="raca" type="text" id="raca" class="form-control" />
+      </div>
+      <div>
+        <label for="sexo">Sexo:</label>
+        <input formControlName="sexo" type="text" id="sexo" class="form-control" />
+      </div>
+      <div>
+        <label for="dataHora" class="form-label">Data Nascimento:</label>
+        <input formControlName="dataNascimento" type="date" id="dataHora" class="form-control" />
+      </div>
+      <div>
+        <label for="tutorId">Tutor id:</label>
+        <input formControlName="tutorId" type="text" id="tutorId" class="form-control" />
+      </div>
+      <div class="d-grid gap-2 col-6 mx-auto">
+        <button
+          type="button"
+          class="btn btn-success mt-3"
+          type="submit"
+          [disabled]="submitted && formularioAnimais.invalid"
+        >
+          Cadastrar Animal
+        </button>
+        <button
+          type="button"
+          class="btn btn-outline-success mt-3"
+          type="submit"
+          [routerLink]="['/animais-lista']"
+          routerLinkActive="router-link-active"
+        >
+          Voltar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
